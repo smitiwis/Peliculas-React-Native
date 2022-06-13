@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+body{
+ 
+    background-color: black;
+    color: white;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+h3{
+  
+    top: -10px;
+    left: 235px;
+    font-size: 30px;
+}
+.container{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 3%;
+    width: 500px;
+    height: 399px;
+    margin: auto; /* Centra la caja mas no el contenido*/
+    padding: 20px ;
+    background-color: white;
+    border: solid 2px rgb(4, 255, 25);
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    width: 98%;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+label{
+    display: inline-block;
+    font-weight: bold;
+    width: 200px;
+    margin: 10px;
+}
+.input{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px 0px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+.nuevo:focus{
+    background-color: lime;
+    color: black;
+    font-size: 25px;
+    width: 100px;
+    font-weight: bold;
+
+}
+.div-button{
+    width: 100%;
+    display: flex;
+}
+.generar{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: lime;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 5px;
+    border: solid 2px rgb(0, 0, 0);
+    margin: 10px auto;
+    width: 100%;
+
+}
+
+.generar:active{
+    transform: scale(0.95);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    
+}
+.formulario1 {
+    width: 500px;
+    background-color: rebeccapurple;
+    margin: 50px auto;
+    font-size: 30px;
+    color: white;
+    padding: 30px;
+}
+
+.formulario2 {
+    width: 1000px;
+    margin: 10px auto;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* .div-formulario2 {
+    margin: 0px;
+    border-radius: 3%;
+    border: solid 2px lime;
+    width: 1100px;
+    margin: auto;
+
+} */
+.nuevo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5px 2px;
+    -webkit-box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.97);
+    -moz-box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.97);
+    box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.97);
+    height: 50px;
+}
+
+.formulario3 {
+    width: 1000px;
+    margin: 10px auto;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.div-formulario3 {
+    margin: 0px;
+    border-radius: 3%;
+    border: solid 2px lime;
+    width: 1100px;
+    margin: auto;
+
+}
+input{
+    border: solid 2px lime;
+}
+
+.salidasEntrenamiento{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.salidasEntrenamiento:focus { 
+    background-color: rgb(255, 0, 0);
+}
+select{
+    border: solid 2px lime;
+}
+select > option {
+    border: solid 2px lime;
+}

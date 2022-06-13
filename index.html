@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./estilos/normalize.css">
+   <link rel="stylesheet" href="./estilos/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <form>
+      <div>
+         <h1>Perceptrón multicapas en JS</h1>
+      </div>
+
+      <div class="container">
+         <div class="formulario">
+            <h3><u>Ingresar datos</u></h3>
+            <div>
+               <label for="entradas">N° Entradas:</label>
+               <input class="input" type="number" id="entradas" value="2">
+            </div>
+            <div>
+               <label for="ocultas">N° C. Ocultas:</label>
+               <input class="input" type="number" id="ocultas"  value="6">
+            </div>
+            <div>
+               <label for="salidas">N° Salidas:</label>
+               <input class="input" type="number" id="salidas"  value="1" >
+            </div>
+            <div>
+               <label for="casos">N° Casos:</label>
+               <input class="input" type="number" id="casos" value="4" >
+            </div>
+            <div>
+               <label for="entrenamientos">N° Entrenamientos:</label>
+               <select class="input" name="entrenamientos" id="entrenamientos">
+                  <option value="1">1</option>
+                  <option value="10">10</option>
+                  <option value="100">100</option>
+                  <option value="1000">1000</option>
+                  <option value="10000">10000</option>
+                  <option value="10000">20000</option>
+                  <option value="10000">30000</option>
+                  <option value="10000">40000</option>
+                  <option value="50000">50000</option>
+               </select>
+               <!-- <input class="input" type="number" id="entrenamientos" value="10"> -->
+            </div>
+            <div>
+               <button class="generar" type="button" id="crear">Generar Tabla de entrenamiento</button>
+           </div>
+         </div>
+      </div>
+   </form>
+
+
+   <h1 style="text-align: center;">Tabla de Entrenamiento</h1>
+   <div class="div-formulario2" id="formContenedor2">
+      <form id="formulario2" class="formulario2"></form>
+     
+   </div>
+   <div class="div-button">
+      <button class="generar" style="width: 25%;" type="button" id="botonEntrenarDatos">Entrenar Datos</button>
+   </div>
+   <div>
+
+   </div>
+
+
+   <h1 style="text-align: center;">Tabla de prueba de Entradas y Salidas</h1>
+   <div class="div-formulario2" id="formContenedor3">
+      <form id="formulario3" class="formulario3" style="margin: 0px;"></form>
+   </div>
+   <div class="div-button">
+      <button class="generar" onclick="probarDatos();" style="width: 25%;" type="button" id="button2">Calcular la salida</button>
+   </div>
+   <div>
+  <!--  <button onclick="probando()">Probando</button> -->
+   </div>
+   <script src="./archivosJS/app.js"></script>
+</body>
+
+</html>
