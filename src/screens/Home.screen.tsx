@@ -1,7 +1,9 @@
 import React from 'react';
+import SplashScreen from 'react-native-splash-screen';
 import {View, ActivityIndicator, Dimensions} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Carousel from 'react-native-snap-carousel';
+import {useEffect} from 'react';
 
 import useMoviesHook from '../hooks/useMovies.hook';
 import MoviePosterComponent from '../components/MoviePoster.component';
@@ -13,6 +15,10 @@ const {width: windowWidth} = Dimensions.get('window');
 const HomeScreen = () => {
   const {peliculasCine, isLoading} = useMoviesHook();
   const {top} = useSafeAreaInsets();
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   if (isLoading) {
     return (
