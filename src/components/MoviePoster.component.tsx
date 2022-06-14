@@ -1,6 +1,8 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
-import {Movie} from '../interfaces/movie.interface';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Movie } from '../interfaces/movie.interface';
 
 interface Props {
   movie: Movie;
@@ -8,21 +10,24 @@ interface Props {
   height: number;
 }
 
-const MoviePosterComponent = ({movie, width, height}: Props) => {
+const MoviePosterComponent = ({ movie, width, height }: Props) => {
   const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  const { navigate } = useNavigation();
 
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => navigate('DetailScreen', movie)}
+      activeOpacity={0.8}
       style={{
         width,
         height,
-        marginHorizontal:5,
-        borderRadius: 10,
+        paddingBottom: 20,
+        paddingHorizontal: 7
       }}>
       <View style={styles.imageContainer}>
-        <Image style={styles.image} source={{uri}} />
+        <Image style={styles.image} source={{ uri }} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -33,19 +38,19 @@ export default MoviePosterComponent;
 const styles = StyleSheet.create({
   image: {
     flex: 1,
-    borderRadius: 10,
+    borderRadius: 18,
   },
 
   imageContainer: {
     flex: 1,
-    borderRadius: 10,
+    borderRadius: 18,
     shadowColor: '#000',
     shadowOffset: {
-      width: 15,
-      height: 15,
+      width: 10,
+      height: 10,
     },
     shadowOpacity: 1,
-    shadowRadius: 10,
-    elevation: 15,
+    shadowRadius: 18,
+    elevation: 10,
   },
 });
